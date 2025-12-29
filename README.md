@@ -23,3 +23,17 @@ This is a simple FastAPI application that manages users in memory (no database n
 
 ```bash
 pip install fastapi uvicorn
+```  
+
+### 2. Run the serverRun the server
+
+```bash
+uvicorn main:app --reload
+```  
+
+### 3. Open in browser
+- Swagger UI: http://127.0.0.1:8000/docs
+- ReDoc: http://127.0.0.1:8000/redoc
+- Home route: http://127.0.0.1:8000/
+
+
