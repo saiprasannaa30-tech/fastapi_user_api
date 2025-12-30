@@ -291,21 +291,21 @@ user_id_counter = 1
 
 #### 8. Auto‑Generated Documentation
 
-FastAPI automatically generates interactive API docs:
+- FastAPI automatically generates interactive API docs:
 
-- Swagger UI: http://127.0.0.1:8000/docs
+  - Swagger UI: http://127.0.0.1:8000/docs
 
-- ReDoc: http://127.0.0.1:8000/redoc
+  - ReDoc: http://127.0.0.1:8000/redoc
 
-From there you can:
+- From there you can:
 
-- Explore all endpoints
+  - Explore all endpoints
   
-- See request/response schemas
+  - See request/response schemas
   
-- View validation rules
+  - View validation rules
   
--Try out requests directly in the browser
+- Try out requests directly in the browser
 
 #### 9. Example cURL Commands
 
