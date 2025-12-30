@@ -354,3 +354,16 @@ This project is meant for learning FastAPI basics:
   - Add authentication/authorization
 
   - Add logging and better error handling
+ 
+    
+## Visual API Overview
+
+| Endpoint       | Method | Description               | Screenshot                                                   |
+|----------------|--------|---------------------------|--------------------------------------------------------------|
+| `/`            | GET    | Home route, check API status | <img src="screenshots/http127.0.0.18000.png" width="250"> |
+| `/users`       | GET    | Get all users (optional limit) | <img src="screenshots/http127.0.0.18000users.png" width="250"> |
+| `/users/{id}`  | GET    | Get user by ID             | <img src="screenshots/user id.png" width="250"> |
+| `/users/{id}`  | DELETE | Delete user by ID          | <img src="screenshots/delete user id.png" width="250"> |
+
+
+
