@@ -1,0 +1,102 @@
+# User API (FastAPI Example)
+
+A simple in‑memory User API built with FastAPI.  
+It demonstrates:
+
+- Basic CRUD operations (Create, Read, Delete) for users
+- Request validation with Pydantic v2
+- Custom middleware that adds a response header
+- Automatic interactive API docs (Swagger UI & ReDoc)
+
+---
+
+
+
+
+3. Open in browser
+Home route: http://127.0.0.1:8000/
+Swagger UI: http://127.0.0.1:8000/docs
+ReDoc: http://127.0.0.1:8000/redoc
+API Usage
+Below are example requests for each endpoint.
+
+Home Route (GET /)
+Description:
+Returns a simple welcome message to confirm that the API is running.
+
+Create User (POST /users)
+Endpoint:
+
+Request body example:
+
+Behavior:
+
+Validates the request using Pydantic.
+Name must be a string.
+Age must be a number (e.g., an integer).
+Get All Users (GET /users)
+Endpoint:
+
+With optional limit parameter:
+
+Behavior:
+
+Returns a list of all users currently stored in memory.
+If limit is provided, returns only that number of users (e.g., first 2 users).
+Get User by ID (GET /users/{user_id})
+Endpoint:
+
+Example:
+
+Behavior:
+
+Returns the user with the given user_id.
+Typically returns a 404-style response if the user is not found (depending on your implementation).
+Delete User (DELETE /users/{user_id})
+Endpoint:
+
+Example:
+
+Behavior:
+
+Deletes the user with the given user_id from the in-memory list.
+Typically returns a confirmation message or status.
+Middleware
+This project includes a simple middleware that:
+
+Adds a custom header to each response, for example:
+X-App-Name: User API
+This shows how to use middleware in FastAPI to modify requests or responses globally.
+
+Pydantic Validation
+User data is validated using Pydantic models, for example:
+
+name: string
+age: integer (or number)
+If invalid data is sent, FastAPI will automatically return a clear validation error response.
+
+Documentation
+FastAPI automatically generates interactive API documentation:
+
+Swagger UI:
+http://127.0.0.1:8000/docs
+ReDoc:
+http://127.0.0.1:8000/redoc
+You can:
+
+Try out endpoints directly from the browser
+See request and response schemas
+View validation rules
+Notes
+Users are stored in memory (all data is lost when the server restarts).
+No database is used in this simple project.
+This project is meant for learning FastAPI basics, including:
+Routing
+Request/response models
+Middleware
+Validation
+Auto-generated documentation
+Screenshot
+Place your screenshot file in the project folder (for example: screenshot.png) and make sure the name below matches your file.
+
+If you paste this entire README and it still breaks the 2. Run the server heading, tell me which editor/viewer you’re using and I’ll help you debug from there.
